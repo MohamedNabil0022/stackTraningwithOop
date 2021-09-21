@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stack.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- stack first in last out like daily work    -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <h2 class="font-weight-bold">Insert Task Info</h2>
+         <form class="form-group" id="myForm" onchange="myFunction(taskName.value,taskTime.value,taskPrice.value , insertBtn)">
+          <input type="text" id="taskName" class="form-control mb-2 d-block" placeholder="insert name" />
+          <input type="text" id="taskTime" class="form-control mb-2 d-block" placeholder="insert time" />
+          <input type="text"
+            id="taskPrice"
+            class="form-control mb-2 d-block"
+            placeholder="insert price"
+          />
+          <button onclick="insert()" id="insertBtn" type="button" class="btn btn-primary col-md-6">insert</button>
+
+         </form>
+
+          <div class="text-center">
+            <h4>current Task is</h4>
+            <div id="currentTask"></div>
+            <button id="finishBtn" class="btn btn-primary" onclick="finishTask()">finish</button>
+          </div>
+        </div>
+        <div class="font-weight-bold col-md-7 works mt-5" >
+          <h2 class="w-100">المهام</h2>
+          <div id="works"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="stack.js"></script>
+  </body>
+</html>
